@@ -2,7 +2,7 @@
 @extends('layouts.fullLayoutMaster')
 
 {{-- page title --}}
-@section('title','User Login')
+@section('title','Leonardo Miranda')
 
 {{-- page style --}}
 @section('page-style')
@@ -12,68 +12,51 @@
 {{-- page content --}}
 @section('content')
 <div id="login-page" class="row">
-  <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
-    <form class="login-form" method="POST" action="{{ route('login') }}">
-      @csrf
-      <div class="row">
-        <div class="input-field col s12">
-          <h5 class="ml-4">{{ __('Sign in') }}</h5>
+
+        @if (session('status'))
+            <div class="mb-4 font-medium text-sm text-green-600">
+                {{ session('status') }}
+            </div>
+        @endif
+        <div class="col s12 m6 l4 z-depth-4 card-panel border-radius-6 login-card bg-opacity-8">
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+            <div class="row">
+                <div class="input-field col s12">
+                    <h5 class="ml-4">Acesso Restrito - Leonardo Miranda</h5>
+                    <x-jet-validation-errors class="mb-4 error" />
+                </div>
+            </div>
+            <div>
+                <x-jet-label for="email" value="Email" />
+                <x-jet-input id="email" class="" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
+
+            <div class="mt-4">
+                <x-jet-label for="password" value="Senha" />
+                <x-jet-input id="password" class="" type="password" name="password" required autocomplete="current-password" />
+            </div>
+
+            
+
+            <div class="flex items-center justify-end mt-4">
+                @if (Route::has('password.request'))
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Esqueceu sua senha?') }}
+                    </a>
+                @endif
+
+                
+            </div>
+            <div class="row">
+            <div class="input-field col s12">
+            <x-jet-button class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">
+                    {{ __('Acessar Sistema') }}
+                </x-jet-button>
+            </div>
+            </div>
+        </form>
         </div>
-      </div>
-      <div class="row margin">
-        <div class="input-field col s12">
-          <i class="material-icons prefix pt-2">person_outline</i>
-          <input id="email" type="email" class=" @error('email') is-invalid @enderror" name="email"
-            value="{{ old('email') }}"  autocomplete="email" autofocus>
-          <label for="email" class="center-align">{{ __('Username') }}</label>
-          @error('email')
-          <small class="red-text ml-7" >
-            {{ $message }}
-          </small>
-          @enderror
-        </div>
-      </div>
-      <div class="row margin">
-        <div class="input-field col s12">
-          <i class="material-icons prefix pt-2">lock_outline</i>
-          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-            name="password"  autocomplete="current-password">
-          <label for="password">{{ __('password') }}</label>
-          @error('password')
-          <small class="red-text ml-7" >
-            {{ $message }}
-          </small>
-          @enderror
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m12 l12 ml-2 mt-1">
-          <p>
-            <label>
-              <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-              <span>Remember Me</span>
-            </label>
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <button type="submit" class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12">
-            Login
-          </button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6 m6 l6">
-          <p class="margin medium-small"><a href="{{ route('register') }}">Register Now!</a></p>
-        </div>
-        <div class="input-field col s6 m6 l6">
-          <p class="margin right-align medium-small">
-            <a href="{{ route('password.request') }}">Forgot password?</a>
-          </p>
-        </div>
-      </div>
-    </form>
-  </div>
+    
 </div>
 @endsection

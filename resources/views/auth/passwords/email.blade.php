@@ -29,8 +29,8 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <h5 class="ml-4">Forgot Password</h5>
-          <p class="ml-4">You can reset your password</p>
+          <h5 class="ml-4">Esqueceu sua senha?</h5>
+          <p class="ml-4">Você pode recuperar ela agora com seu email!</p>
         </div>
       </div>
       <div class="row">
@@ -49,16 +49,12 @@
       <div class="row">
         <div class="input-field col s12">
           <button type="submit"
-            class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12 mb-1">Reset
-            Password</button>
+            class="btn waves-effect waves-light border-round gradient-45deg-purple-deep-orange col s12 mb-1">Resetar Senha</button>
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s6 m6 l6">
-          <p class="margin medium-small"><a href="{{ route('login')}}">Login</a></p>
-        </div>
-        <div class="input-field col s6 m6 l6">
-          <p class="margin right-align medium-small"><a href="{{route('register')}}">Register</a></p>
+        <div class="input-field col s12">
+          <p class="margin medium-small"><a href="{{ route('login')}}">Entrar no Sistema</a></p>
         </div>
       </div>
     </form>

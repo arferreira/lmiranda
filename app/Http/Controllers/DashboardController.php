@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+
 class DashboardController extends Controller
 {
+    use AuthorizesRequests;
     // view da página inicial do dashboard
     public function dashboardHome(){
         $data['month'] = date('n');

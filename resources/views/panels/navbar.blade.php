@@ -58,10 +58,13 @@
         </li> 
         <li class="divider"></li>
         <li>
-          <a class="grey-text text-darken-1" href="{{asset('user-login')}}">
+        <form action="/logout" method="POST">
+          @csrf
+          <a class="grey-text text-darken-1" href="/logout" onclick="event.preventDefault(); this.closest('form').submit();">
             <i class="material-icons">keyboard_tab</i>
-            Sair do sistema
+            Sair
           </a>
+          </form>
         </li>
       </ul>
     </div>
