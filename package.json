@@ -1,6 +1,6 @@
 {
     "private": true,
-    "name": "Sistema de Consultas Odontologicas",
+    "name": "SISODONTO",
         "description": "Sistema de Gestão",
         "version": "1.0.0",
         "engines": {
