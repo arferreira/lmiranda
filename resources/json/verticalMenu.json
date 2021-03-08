@@ -1,0 +1,79 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Agenda",
+      "i18n": "Agenda",
+      "class": "waves-effect waves-cyan",
+      "slug": "dashboard",
+      "icon": "perm_contact_calendar",
+      "tagcustom": "badge pill orange float-right mr-10"
+    },
+    {
+      "navheader": "Operacional",
+      "icon": "more_horiz"
+    },
+    {
+      "url": "pacientes",
+      "name": "Pacientes",
+      "i18n": "Pacientes",
+      "class": "waves-effect waves-cyan",
+      "icon": "perm_identity",
+      "slug": "pacientes"
+    },
+    {
+      "url": "app-chat",
+      "name": "Financeiro",
+      "i18n": "Financeiro",
+      "class": "waves-effect waves-cyan",
+      "icon": "payment",
+      "slug": "financeiro"
+    },
+    {
+      "url": "javascript:void(0)",
+      "name": "Relatórios",
+      "i18n": "Relatórios",
+      "class": "collapsible-header waves-effect waves-cyan",
+      "icon": "reorder",
+      "slug": "relatorios",
+      "dropdown": "1",
+      "submenu": [
+        {
+          "url": "modern",
+          "i18n": "Aniversatiantes",
+          "name": "Aniversariantes",
+          "slug": "modern"
+        },
+        {
+          "url": "ecommerce",
+          "i18n": "Inatividade",
+          "name": "Inatividade",
+          "slug": "Inatividade"
+        }
+      ]
+    },
+    {
+      "url": "javascript:void(0)",
+      "name": "Configurações",
+      "i18n": "Configurações",
+      "class": "collapsible-header waves-effect waves-cyan",
+      "icon": "settings",
+      "slug": "configuracoes",
+      "dropdown": "1",
+      "submenu": [
+        {
+          "url": "modern",
+          "i18n": "Aniversatiantes",
+          "name": "Aniversariantes",
+          "slug": "modern"
+        },
+        {
+          "url": "ecommerce",
+          "i18n": "Inatividade",
+          "name": "Inatividade",
+          "slug": "Inatividade"
+        }
+      ]
+    }
+  ]
+}
