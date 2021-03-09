@@ -1,12 +1,13 @@
 {
     "private": true,
     "name": "SISODONTO",
-    "description": "Sistema de Gest\u00e3o",
+    "description": "Sistema de Gestão",
     "version": "1.0.0",
     "engines": {
         "node": "12.21.0"
     },
     "scripts": {
+        "preinstall": "npm config set package-lock false",
         "dev": "npm run development",
         "development": "mix",
         "watch": "mix watch",
