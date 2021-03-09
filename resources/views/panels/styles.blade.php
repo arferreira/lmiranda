@@ -26,6 +26,6 @@
 @endif
 <!-- END: Page Level CSS-->
 <!-- BEGIN: Custom CSS-->
-<link rel="stylesheet" type="text/css" href="{{asset('css/laravel-custom.css')}}">
-<link rel="stylesheet" type="text/css" href="{{asset('css/custom/custom.css')}}">
+<link rel="stylesheet" type="text/css" href="/css/laravel-custom.css">
+<link rel="stylesheet" type="text/css" href="/css/custom/custom.css">
 <!-- END: Custom CSS-->
