@@ -19,6 +19,7 @@ use App\Http\Controllers\BasicTableController;
 use App\Http\Controllers\DataTableController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\ChartController;
+use App\Http\Controllers\PatientsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,8 +36,9 @@ Auth::routes(['verify' => true]);
 
 // Dashboard Route
 // Route::get('/', [DashboardController::class, 'dashboardModern'])->middleware('verified');
-Route::get('/', [DashboardController::class, 'dashboardHome']);
-Route::get('/pacientes', [DashboardController::class, 'dashboardPatient']);
+Route::middleware(['auth:sanctum', 'verified'])->get('/', [DashboardController::class, 'dashboardHome'])->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/pacientes', [PatientsController::class, 'index'])->name('patients');
 
 Route::get('/modern', [DashboardController::class, 'dashboardModern']);
 Route::get('/ecommerce', [DashboardController::class, 'dashboardEcommerce']);
@@ -177,4 +179,4 @@ Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboaaard');
