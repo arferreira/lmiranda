@@ -31,7 +31,7 @@
     <div class="col s12 m12 l12">
       <div id="responsive-table" class="card card card-default scrollspy">
         <div class="card-content">
-          <h4 class="card-title">Pacientes</h4>
+          <h4 class="card-title">Pacieentes</h4>
           <div class="row">
             <div class="col s12">
             </div>
