@@ -19,7 +19,7 @@ use App\Http\Controllers\BasicTableController;
 use App\Http\Controllers\DataTableController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\ChartController;
-use App\Http\Controllers\PatientsController;
+use App\Http\Controllers\Patients;
 
 /*
 |--------------------------------------------------------------------------
@@ -178,5 +178,5 @@ Route::get('/charts-sparklines', [ChartController::class, 'sparklines']);
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboardHome');
+    return view('dashboard');
 })->name('dashboaaard');
