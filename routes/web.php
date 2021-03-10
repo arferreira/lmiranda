@@ -177,4 +177,6 @@ Route::get('/charts-sparklines', [ChartController::class, 'sparklines']);
 // locale route
 Route::get('lang/{locale}', [LanguageController::class, 'swap']);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [DashboardController::class, 'dashboardHome'])->name('dashboaaard');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboardHome');
+})->name('dashboaaard');
