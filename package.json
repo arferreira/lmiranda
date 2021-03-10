@@ -1,11 +1,5 @@
 {
     "private": true,
-    "name": "SISODONTO",
-    "description": "Sistema de Gestão",
-    "version": "1.0.0",
-    "engines": {
-        "node": "12.21.0"
-    },
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
@@ -13,29 +7,18 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production",
-        "heroku-postbuild": "npm run prod"
+        "production": "mix --production"
     },
     "devDependencies": {
-        "@tailwindcss/forms": "^0.2.1",
-        "@tailwindcss/typography": "^0.3.0",
-        "alpinejs": "^2.7.3",
-        "autoprefixer": "^10.0.2",
         "axios": "^0.21",
         "jquery": "^3.2",
-        "laravel-mix": "^6.0.13",
+        "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
-        "postcss": "^8.2.7",
-        "postcss-import": "^12.0.1",
+        "postcss": "^8.1.14",
         "resolve-url-loader": "^3.1.2",
-        "rtlcss": "^2.4.1",
         "sass": "^1.15.2",
-        "sass-loader": "^11.0.1",
-        "tailwindcss": "^2.0.1",
-        "webpack": "^5.24.4"
-    },
-    "dependencies": {
-        "bootstrap": "^4.6.0"
+        "sass-loader": "^8.0.0",
+        "rtlcss": "^2.4.1"
     }
 }
