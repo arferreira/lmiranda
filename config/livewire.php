@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'http://lmiranda.herokuapp.com/public',
+    'asset_url' => env('APP_URL').'/public',
 
     /*
     |--------------------------------------------------------------------------
